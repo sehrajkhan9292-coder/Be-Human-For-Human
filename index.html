@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Our Cause | Donate</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#1e3a8a,#0ea5e9,#020617);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+color:white;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAV */
+nav{
+padding:18px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:80px 20px 40px;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:.9;
+max-width:700px;
+margin:auto;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* SECTIONS */
+.section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+padding:30px;
+border-radius:22px;
+margin-bottom:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* DONATE BOX */
+.donate-box{
+text-align:center;
+}
+
+.upi-box{
+background:rgba(0,0,0,0.35);
+padding:12px;
+border-radius:10px;
+margin:12px auto;
+font-weight:bold;
+max-width:300px;
+word-break:break-all;
+}
+
+.qr{
+width:220px;
+margin:15px auto;
+background:white;
+padding:8px;
+border-radius:12px;
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+padding:12px 22px;
+margin:6px;
+border:none;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+color:white;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.amounts{
+margin-top:10px;
+}
+
+.amounts button{
+margin:5px;
+}
+
+/* IMPACT GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.impact{
+text-align:center;
+padding:20px;
+border-radius:16px;
+background:rgba(255,255,255,0.06);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+opacity:.75;
+font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>❤️ Support & Donate</nav>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Together We Can Make a Difference</h1>
+<p>
+Your small contribution can create big impact. Support the mission and help bring positive change.
+</p>
+</div>
+
+<!-- DONATION SECTION -->
+<div class="section">
+<div class="card donate-box">
+
+<h2>Donate via UPI</h2>
+
+<div class="upi-box" id="upi">
+99568333@axl
+</div>
+
+<button class="btn" onclick="copyUPI()">📋 Copy UPI</button>
+
+<!-- AMOUNT BUTTONS -->
+<div class="amounts">
+<button class="btn">₹50</button>
+<button class="btn">₹100</button>
+<button class="btn">₹500</button>
+<button class="btn">₹1000</button>
+</div>
+
+<!-- QR -->
+<img class="qr"
+src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=99568333@axl"
+alt="UPI QR">
+
+<p style="opacity:.85;">Scan QR with any UPI app</p>
+
+<a href="upi://pay?pa=99568333@axl">
+<button class="btn">📱 Pay Now</button>
+</a>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<div class="card">
+<h2>Why Your Donation Matters</h2>
+<p>
+Every donation helps in supporting meaningful initiatives and bringing real change.
+Your generosity enables better resources, stronger support systems, and wider impact.
+We ensure transparency and proper utilization of every contribution received.
+</p>
+</div>
+</div>
+
+<!-- IMPACT -->
+<div class="section">
+<div class="card">
+<h2>Your Impact</h2>
+
+<div class="grid">
+
+<div class="impact">
+<h3>₹50</h3>
+<p>Supports small essential needs</p>
+</div>
+
+<div class="impact">
+<h3>₹100</h3>
+<p>Helps expand our reach</p>
+</div>
+
+<div class="impact">
+<h3>₹500</h3>
+<p>Creates meaningful contribution</p>
+</div>
+
+<div class="impact">
+<h3>₹1000+</h3>
+<p>Makes major positive impact</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- TRUST -->
+<div class="section">
+<div class="card" style="text-align:center;">
+<h2>Secure & Trusted</h2>
+<p>
+🔒 100% Secure Payments<br>
+⚡ Instant UPI Transfer<br>
+🙏 Every Contribution Matters
+</p>
+</div>
+</div>
+
+<footer>
+© 2026 Donation Page | Thank you for your kindness ❤️
+</footer>
+
+<script>
+function copyUPI(){
+navigator.clipboard.writeText("99568333@axl");
+alert("UPI copied!");
+}
+</script>
+
+</body>
+</html>
